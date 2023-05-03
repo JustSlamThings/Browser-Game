@@ -67,37 +67,58 @@ let playerTotal = null;
 let bankerTotal = null;
 let winner = null;
 
-function totalTheHands() {
+function totalTheHands1() {
   playerTotal = (playercard1.value + playercard2.value) % 10;
   bankerTotal = (bankercard1.value + bankercard2.value) % 10;
-  compareHandsForNaturals();
+  document.getElementById("left").append(playerTotal);
+  document.getElementById("right").append(bankerTotal);  
+//   totalTheHands2();
+//   compareHandsForNaturals();
 }
 
-function totalTheHands2() {
-  playerTotal = (playercard1.value + playercard2.value + pnewcardel.value) % 10;
-  bankerTotal = (bankercard1.value + bankercard2.value + bnewcardel.value) % 10;
-  compareHandsFinal();
-}
-function playerNatural(){
-    if (playerTotal == 8 || playerTotal == 9)
-playercardel.innerHTML = "Player has a natural! ${playerTotal}"
-}
+
+// function totalTheHands2() {
+//   playerTotal = (playercard1.value + playercard2.value + pnewcardel.value) % 10;
+//   bankerTotal = (bankercard1.value + bankercard2.value + bnewcardel.value) % 10;
+//   compareHandsFinal();
+//   document.getElementById("left").append("playerTotal");
+//   document.getElementById("right").append("bankerTotal");
+// }
+// function playerNatural(){
+//     if (playerTotal == 8 || playerTotal == 9)
+// playercardel.innerHTML = "Player has a natural! ${playerTotal}"
+
+// }
 
 function bankerNatural(){
     if (bankerTotal == 8 || bankerTotal == 9)
-bankercardel.innerHTML = "Banker has a natural! ${bankerTotal}"
+bankercardel.innerHTML = "Banker has a natural! ${bankerTotal}";
 }
-function compareHandsForNaturals(){
 
-}
+// function compareHandsForNaturals(){
+//     if (playerTotal > bankerTotal)
+//     //player wins 
+//     //returns amountwaggered if bet was on tie. 
+// } else if (bankerTotal > playerTotal){
+// // banker wins 
+// //returns amountwaggered if bet was on tie. 
+
+// } else if (playerTotal == bankerTotal){
+// //tie bet. 
+// //return payout if bet on banker or player
+// //take amountwaggered if bet was on tie and return 8 times. 
+// //
+// }
+
+
 // function payOut(){
 //     betAmount()+=
 // }
 
 
-function compareHandsFinal(){
+// function compareHandsFinal(){
 
-}
+// }
 let dealbtn = document.getElementById("deal");
 let okprompt = document.createElement("button");
 okprompt.id = "okprompt";
@@ -138,10 +159,9 @@ dealbtn.addEventListener("click",function () {
     bankercardel.append(bankercard2);
 
     playercardel.append(playercard1);
-    playercardel.append(playercard2);
-
-
-    //    let playerTotal = pcard1.value + pcard2.value+ pnewcard.value;
+    playercardel.append(playercard2); 
+    let playerTotal = pcard1.value + pcard2.value+ pnewcard.value;
+    let bankerTotal = bcard1.value + bcard2.value+ bnewcard.value;
 
     
 //     // document.createElement()
@@ -203,7 +223,7 @@ dealbtn.addEventListener("click",function () {
         dealbtn.disabled = true;
         // okprompt.innerHTML = "?";
         // midel.append(okprompt);
-    }
+    };
     // else if(playerTotal%10 <= 5){
     //     bnewcard=new card(randomRange(1,13),randomRange(1,4));
     //     console.log("?");
@@ -243,52 +263,11 @@ scoreDisplay.addEventListener("click", function () {
 // bankerValueIndicator
 
 
-// let gameResults=document.getElementById("scoreComparison")
-// let z = document.createElement("p");
-// let string =`Player total: ${playerTotal} Banker total: ${bankerTotal}`;
+let gameResults=document.getElementById("scoreComparison")
+let z = document.createElement("p");
+let string =`Player total: ${playerTotal} Banker total: ${bankerTotal}`;
 // z.innerHTML=string;
 // gameResults.append(z);
 
 // function computeHands(){
 // }    
-// }
-
-// let x = document.getElementById("bankerCard");
-// let bankercardimg = document.createElement("img");
-// bankercardimg.src = demo.src;
-// x.append(bankercardimg);
-
-
-// let dealbtn = document.getElementById("deal");
-
-
-// dealbtn.addEventListener("click",function () {
-
-//     let bankercard1 = document.createElement("img");
-//     let bankercard2 = document.createElement("img");
-//     let playercard1 = document.createElement("img");
-//     let playercard2 = document.createElement("img");
-
-
-//     bankercard1.src = new card((Math.floor(Math.random() * (13 - 1 + 1)) + 1),"spades",1).src;
-//     bankercard2.src = new card((Math.floor(Math.random() * (13 - 1 + 1)) + 1),"hearts",1).src;
-
-//     playercard1.src = new card((Math.floor(Math.random() * (13 - 1 + 1)) + 1),"hearts",1).src;
-//     playercard2.src = new card((Math.floor(Math.random() * (13 - 1 + 1)) + 1),"hearts",1).src;
-
-//     bankercardel.append(bankercard1);
-//     bankercardel.append(bankercard2);
-
-//     playercardel.append(playercard1);
-//     playercardel.append(playercard2);
-
-    
-
-
-
-// });
-
-// // let x = document.getElementById("bankerCard");
-// // let bankercardimg = document.createElement("img");
-// // bankercardimg.src = demo.src;
-// // x.append(bankercardimg);
