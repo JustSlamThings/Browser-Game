@@ -81,32 +81,10 @@ function randomRange(min, max) {
 //   compareHandsForNaturals();
 // }
 
-<<<<<<< HEAD
-let bcard1 = null;
-let bcard2 = null;
-let pcard1 = null;
-let pcard2 = null;
-let playerTotal = null;
-let bankerTotal = null;
-let winner = null;
-
-function totalTheHands1() {
-  playerTotal = (playercard1.value + playercard2.value) % 10;
-  bankerTotal = (bankercard1.value + bankercard2.value) % 10;
-  document.getElementById("left").append(playerTotal);
-  document.getElementById("right").append(bankerTotal);  
-//   totalTheHands2();
-//   compareHandsForNaturals();
-}
-
-
-=======
->>>>>>> 5b4c5c2261fb384b30d79a55cf3d89b238a18610
 // function totalTheHands2() {
 //   playerTotal = (playercard1.value + playercard2.value + pnewcardel.value) % 10;
 //   bankerTotal = (bankercard1.value + bankercard2.value + bnewcardel.value) % 10;
 //   compareHandsFinal();
-<<<<<<< HEAD
 //   document.getElementById("left").append("playerTotal");
 //   document.getElementById("right").append("bankerTotal");
 // }
@@ -119,17 +97,6 @@ function totalTheHands1() {
 function bankerNatural(){
     if (bankerTotal == 8 || bankerTotal == 9)
 bankercardel.innerHTML = "Banker has a natural! ${bankerTotal}";
-=======
-// }
-function playerNatural(){
-    if (playerTotal == 8 || playerTotal == 9)
-playercardel.innerHTML = `Player has a natural! ${playerTotal}`
-}
-
-function bankerNatural(){
-    if (bankerTotal == 8 || bankerTotal == 9)
-bankercardel.innerHTML = `Banker has a natural! ${bankerTotal}`
->>>>>>> 5b4c5c2261fb384b30d79a55cf3d89b238a18610
 }
 
 // function compareHandsForNaturals(){
@@ -195,17 +162,11 @@ dealbtn.addEventListener("click",function(){
     bankercardel.append(bankercard2);
 
     playercardel.append(playercard1);
-<<<<<<< HEAD
-    playercardel.append(playercard2); 
-    let playerTotal = pcard1.value + pcard2.value+ pnewcard.value;
-    let bankerTotal = bcard1.value + bcard2.value+ bnewcard.value;
-=======
     playercardel.append(playercard2);
 
     let playerTotal = (pcard1.value + pcard2.value)%10;
     let playerValue = document.getElementById("playerValueIndicator");
     playerValue.innerHTML=`The player has a ${playerTotal}`;
->>>>>>> 5b4c5c2261fb384b30d79a55cf3d89b238a18610
 
     
     let bankerTotal = (bcard1.value + bcard2.value)%10;
@@ -293,14 +254,9 @@ dealbtn.addEventListener("click",function(){
         bankerTotal = (bcard1.value + bcard2.value+ bnewcard.value)%10;
         bankerValue.innerHTML=`The banker has a ${bankerTotal}`;
         // okprompt.innerHTML = "?";
-<<<<<<< HEAD
-        // midel.append(okprompt);
-    };
-=======
         midel.append(okprompt);
         gameResults.append(z);
     }
->>>>>>> 5b4c5c2261fb384b30d79a55cf3d89b238a18610
     // else if(playerTotal%10 <= 5){
     //     bnewcard=new card(randomRange(1,13),randomRange(1,4));
     //     console.log("?");
@@ -339,21 +295,6 @@ scoreDisplay.addEventListener("click", function () {
 });
 };
 
-<<<<<<< HEAD
-// let bankerTotal=""
-// bankerValueIndicator
-
-
-let gameResults=document.getElementById("scoreComparison")
-let z = document.createElement("p");
-let string =`Player total: ${playerTotal} Banker total: ${bankerTotal}`;
-// z.innerHTML=string;
-// gameResults.append(z);
 
 // function computeHands(){
 // }    
-=======
-
-// function computeHands(){
-// }    
->>>>>>> 5b4c5c2261fb384b30d79a55cf3d89b238a18610
