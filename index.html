@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="card.js"></script>
     <script src="index.js" defer></script>
     <script defer src="allocateWager.js"></script>
     <script defer src="assetmanagerCopy.js"></script>
@@ -23,7 +22,7 @@
             <span style="color:red">&hearts;</span>
             <span style="color:black"> &clubs;</span>
             <span style="color:red"> &diams;</span>
-            <span style="color:black"> Baccarat Sim</span>
+            <span style="color:white"> Slam's Baccarat</span>
             <span style="color:black">&spades;</span>
             <span style="color:red">&hearts;</span>
             <span style="color:black"> &clubs;</span>
@@ -32,26 +31,35 @@
         </div>
 <div id="container">
 
-<div id="right">Player
+<div id="left">
+    <div>Player</div>
     <div id="playerBet"></div>
     <div id="playerCard"></div>
     <div id="playerValueIndicator"></div>
 </div>
-<div id="left">Banker
+<!-- <div id="right">Player
+    <div id="playerBet"></div>
+    <div id="playerCard"></div>
+    <div id="playerValueIndicator"></div>
+</div> -->
+
+<div id="right"><div>Banker</div>
     <div id="bankerBet"></div>
     <div id="bankerCard"></div>
     <div id="bankerValueIndicator"></div>
 </div>
-<div id="mid">Payouts<p id="scoreComparison"></p><div></div>
-<div id="tieBet">xx</div>
+<div id="mid"><div id="payout">Payouts
 
+</div><p id="scoreComparison"></p><div></div>
+<div id="tieBet"></div>
+<div id="winner">Who Wins? </div>
 
         <div id="bettingAmounts">
-        <button id="white"><img src="assets/White.jpg" alt="White $1"></button>
-        <button id="blue"><img src="assets/Blue.jpg" alt="Blue $5"></button>
-        <button id="green"><img src="assets/Green.jpg" alt="Green $25"></button>
-        <button id="red"><img src="assets/Red.jpg" alt="Red $50"></button>
-        <button id="black"><img src="assets/Black.jpg" alt="Black $100"></button>
+        <button id="white"><img src="Assets/White.jpg" alt="White $1"></button>
+        <button id="blue"><img src="Assets/Blue.jpg" alt="Blue $5"></button>
+        <button id="green"><img src="Assets/Green.jpg" alt="Green $25"></button>
+        <button id="red"><img src="Assets/Red.jpg" alt="Red $50"></button>
+        <button id="black"><img src="Assets/Black.jpg" alt="Black $100"></button>
         <label for="amountWage">Amount Wagered:</label> <input type="number" id="amountwagered" value="0">
         </div>
 </div>
@@ -59,8 +67,9 @@
 
 <div id="bottom">
     <div id="uibtns">
+
+        <button id="playerBetButton">Player</button>        
         <button id="bankerBetButton">Banker</button>
-        <button id="playerBetButton">Player</button>
         <button id="tieBetButton">Tie</button>
         <form inputmode="numeric"></form>
     </div>
@@ -90,12 +99,14 @@ buttons.addEventListener("click",function(){
     okprompt.remove();
     dealbtn.disabled = false;
 audio.play();
-});</script>
+gameResults.remove(z);
+});
+</script>
 
 </button>
-<!-- This should invoke a shuffling noise to help the gambler experience a shuffling noise.  -->
+<!-- This is an inline javascript for the shuffle function. This should invoke a shuffling noise to help the gambler experience a shuffling noise.  -->
         <button id="deal">Deal</button>
-        <button id="clearAll">Clear All</button>
+        <!-- <button id="clearAll">Clear All</button> -->
         <div id="links">
             <!-- <a href="./AboutTheGame.html">About the Game</a></button> -->
             <input type="button" onclick="location.href='./AboutTheGame.html';" value="About the Game" />

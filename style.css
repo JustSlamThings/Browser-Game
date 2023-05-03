@@ -1,7 +1,13 @@
-.casinoName{
-    display: flex;
-    justify-content:space-between
 
+*{
+    font-weight: bold;
+    color: aliceblue;
+}
+button{
+    color: black;
+}
+input{
+    color: black;
 }
 body {
     background: url("./Assets/PokerBackgroundCropped.jpg");
@@ -19,7 +25,11 @@ div{
 ul {
     list-style-type: none;
 }
+.casinoName{
+    display: flex;
+    justify-content:space-between
 
+}
 #container{
     display: grid;
     height: 650px;
@@ -40,13 +50,15 @@ ul {
     display: flex;
     grid-column: 1;
     grid-row: 1;
-    
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 #right{
     display: flex;
     grid-column: 3;
     grid-row: 1;
-    
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 #bottom{
     display: flex;
@@ -64,8 +76,8 @@ ul {
 
 
 button>img{
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     /* border-radius: 100%; */
@@ -75,10 +87,21 @@ button>img{
     padding:  0px 0px;
     overflow: hidden;
     align-items: center;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    padding: 0 2 0 0;
+    margin: 0 2 0 0;
+    justify-content: center;
 }
 
+#winner{
+    font-size: larger;
+}
+
+#payout{
+    border-color: black;
+    border: 2px solid black;
+    padding: 40px;
+    font-size: 50px;
+}
 /* span {
     align-content: center;
     justify-content: center;
