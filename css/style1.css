@@ -1,0 +1,132 @@
+
+*{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+button{
+    color: black;
+}
+input{
+    color: black;
+}
+body {
+    background: url("/Assets/PokerBackgroundCropped.jpg");
+    background-color: #cccccc;
+    size: 100%;
+    background-repeat: repeat;
+    background-size: cover; 
+}
+
+
+div{
+    border: solid 0px red ; 
+}
+
+ul {
+    list-style-type: none;
+}
+.casinoName{
+    display: flex;
+    justify-content:space-between
+
+}
+#container{
+    display: grid;
+    height: 650px;
+    place-items: center;
+}
+#mid{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 1;
+    
+}
+#left{
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#right{
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#bottom{
+    display: flex;
+    grid-column: 1 /span 3;
+    grid-row: 2;
+}
+#bettingAmounts{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+}
+
+
+button>img{
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    /* border-radius: 100%; */
+}
+#bettingAmounts button{
+    border-radius: 100%;
+    padding:  0px 0px;
+    overflow: hidden;
+    align-items: center;
+    padding: 0 2 0 0;
+    margin: 0 2 0 0;
+    justify-content: center;
+}
+
+#winner{
+    font-size: larger;
+}
+
+#payout{
+    border-color: black;
+    border: 2px solid black;
+    padding: 40px;
+    font-size: 50px;
+}
+/* span {
+    align-content: center;
+    justify-content: center;
+} */
+/* Can't align these properly.  */
+
+/* 
+
+#white {
+    width: 5px;
+    height: 5px;
+}
+#blue {
+    width: 5px;
+    height: 5px;
+}
+#green {
+    width: 5px;
+    height: 5px;
+}
+#red{ 
+    width: 5px;
+    height: 5px;
+}
+#black{
+    width: 5px;
+    height: 5px;
+}  */
